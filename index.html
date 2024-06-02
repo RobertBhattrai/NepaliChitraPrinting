@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Nepali Chitra Printing</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- using logo for footer section -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- scroll-watcher div above the navigation bar -->
+    <div class="scroll-watcher"></div>
+    <!-- Header of the webpage -->
+    <header class="header">
+      <!-- logo -->
+      <div class="logo-content">
+        <a href="#" class="logo">
+          <img id="logo" src="dark-logo.png" alt="" />
+        </a>
+        <img id="icon" src="moon.png" alt="" />
+      </div>
+      <!-- Navigation menu -->
+      <nav class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="products.html">Services</a>
+        <a href="research.html">Research</a>
+        <a href="aboutus.html">About</a>
+      </nav>
+    </header>
+    <!-- main content of the webpage-->
+    <main>
+      <section class="home" id="home">
+        <!-- Featured printers in homepage -->
+        <div class="heading">
+          <!-- Using span tag for Highlighting words -->
+          <h1><span>Nepali Chitra</span> Printing</h1>
+        </div>
+        <!-- div for containg all our Image for Imageslider -->
+        <div class="wrapper">
+          <div class="slider">
+            <img class="slide" src="ImageSlider1.jpeg" alt="" />
+            <img class="slide" src="ImageSlider2.jpeg" alt="" />
+            <img class="slide" src="ImageSlider4.jpeg" alt="" />
+            <img class="slide" src="ImageSlider5.jpeg" alt="" />
+          </div>
+          <!-- div for buttons in Image slider -->
+          <div class="buttons">
+            <button id="left" onclick="goPrev()">
+              <img src="right-arrow.svg" alt="" />
+            </button>
+            <button onclick="goNext()">
+              <img src="right-arrow.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <!-- End of the  Image slider -->
+        <!-- div content for giving intorduction to our Nepali Chitra Printing -->
+        <div class="home-content">
+          <!-- individual section div for sub heading, images, and short paragraph -->
+          <div class="section">
+            <img class="home-images" src="ImageSlider2.jpeg" alt="" />
+            <!-- section div are divided into two part i.e. Image and written-content -->
+            <div class="written-content">
+              <h2>Welcome to <span>Nepali Chitra Printing</span></h2>
+              <p>
+                Enhance your creative productivity, where your creative vision
+                and our excellent printing skills combine to create works of art
+                that are realized in the real world. Enhance your ability to
+                print your imaginative ideas with the excellent quality and
+                advanced functionality.
+              </p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="written-content">
+              <h2><a href="#services">Our products</a></h2>
+              <p>
+                We offer a large selection of excellent printers with advanced,
+                user-friendly technology at cost-effective rates, fit for both
+                professional purpose or home usage so you can choose the one that
+                best suits your needs.
+              </p>
+            </div>
+            <img
+              class="home-images-right"
+              src="homeimg2.au_fs_2d4fc8b7-cba8-4526-85d3-03a76d026d25"
+              alt=""
+            />
+          </div>
+
+          <div class="section">
+            <img class="home-images" src="homeimg3.png" alt="" />
+            <div class="written-content">
+              <h2>Why <span>us?</span></h2>
+              <p>
+                Our top priority is keeping our customers happy therefore we
+                offer extensive range of premium-quality printers at unbeatable
+                prices. Your concern is our priority. Our team is always ready
+                to assist you with best maintenance and guidelines, no matter
+                where you are. Your happiness is our concern.
+              </p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="written-content">
+              <h2><a href="#contact">Contact</a></h2>
+              <p>
+                Don't miss out on exclusive offers and updates! Stay connected
+                with us by following us on social media. Get the latest news,
+                maintenance guidance, and access limited-time offers that you
+                won't find anywhere else. Your experiences, feedback, and
+                interactions with us encourage us our commitment to continuous
+                improvement and providing quality service.
+              </p>
+            </div>
+            <img class="home-images-right" src="homeimg4.jpeg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!--End of first section-->
+
+      <!-- Blog Page -->
+      <section class="blog" id="blog">
+        <div class="blog-head">
+          <h2 class="heading">B<span>log</span></h2>
+        </div>
+        <div class="flex-container">
+          <!-- flex-container contains individual container of blog page -->
+          <!-- About Technology -->
+          <div class="container-0">
+            <div class="card">
+              <img class="head-img" src="blog1.jpg" />
+              <h2><span>About</span> technology</h2>
+              <p>
+                In the 21st century, technology has become an omnipresent force,
+                weaving itself into the fabric of our daily lives and reshaping
+                the way we live, work, and interact. This essay explores the
+                multifaceted...<a class="blog-link" href="blog.html#aboutTec"
+                  >read more</a
+                >
+                <!-- adding a 'read more' to the end of the paragraph linked to blog page -->
+              </p>
+            </div>
+          </div>
+          <!-- Positive Imapact -->
+          <div class="container-1">
+            <div class="card">
+              <img class="head-img" src="blog2.jpg" />
+              <h2><span>Positive</span> impact</h2>
+              <p>
+                One of the most profound ways in which technology has altered
+                our lives is through the revolutionized landscape of
+                communication. Gone are the days of geographical constraints, as
+                digital platforms, video...<a
+                  class="blog-link"
+                  href="blog.html#positive"
+                  >read more</a
+                >
+              </p>
+            </div>
+          </div>
+          <!-- Negative Impact -->
+          <div class="container-2">
+            <div class="card">
+              <img class="head-img" src="blog3.png" />
+              <h2><span>Negative</span> impact</h2>
+              <p>
+                Despite the connectivity technology provides, concerns have
+                arisen about its impact on social dynamics. The rise of social
+                media, while fostering online communities, has also been
+                associated with social...<a
+                  class="blog-link"
+                  href="blog.html#negative"
+                  >read more</a
+                >
+              </p>
+            </div>
+          </div>
+          <!-- Impact on Daily life -->
+          <div class="container-3">
+            <div class="card">
+              <img class="head-img" src="blog4.jpeg" />
+              <h2><span>Impact</span> on Daily life and business</h2>
+              <p>
+                Printers have undeniably revolutionized the way we
+                communicate,work,and express ourselves bringing about increased
+                efficiency and accessibility.The positive impact is streamlined
+                workflows,...<a class="blog-link" href="blog.html#impact"
+                  >read more</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- blog-conclusion div-->
+        <div class="blog-conclusion">
+          <h2 class=""><span>C</span>onclusion</h2>
+          <p>
+            In conclusion, the transformative impact of technology on society is
+            undeniable. It has ushered in an era of unprecedented connectivity,
+            efficiency, and innovation. However, it is imperative to acknowledge
+            and address the challenges that accompany this technological
+            revolution. Striking a balance between harnessing the positive
+            potential of technology and mitigating its negative consequences
+            requires ethical considerations, responsible practices, and a
+            collective commitment to shaping a future where technology serves
+            humanity in a holistic and sustainable manner.
+          </p>
+        </div>
+      </section>
+      <!--End of blog section-->
+      <!-- Services page -->
+      <section id="services" class="products-section">
+        <!-- Inline Css for adjusting bottom margin -->
+        <h2 style="margin-bottom: 3rem" class="heading">
+          Our Features <span>Products</span>
+        </h2>
+        <!-- creating a product-wrapper containing features products -->
+        <div class="product-wrapper">
+          <div class="products-card">
+            <div class="image-wrapper">
+              <img src="pp.png" width="100%" />
+              <!-- inline CSS -->
+            </div>
+            <!-- content-wrapper for writing products details -->
+            <div class="content-wrapper">
+              <h5 class="productName">HP OfficeJet Pro 9015e</h5>
+              <div class="review">
+                <p>
+                  Rating:
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                  2287 reviews
+                </p>
+                <!-- Using special symbols i.e. Solid star, and empty star -->
+              </div>
+              <h3>Save <span>$100</span></h3>
+              <br />
+              <h2 style="align-self: flex-start" class="price">Price : $399</h2>
+              <del class="DltPrice">
+                <h3>Price : $499</h3>
+              </del>
+
+              <p class="warranty">1-year warranty included</p>
+              <div class="show-more">
+                <h1 style="text-align: center">
+                  Printer <span>highlights</span>
+                </h1>
+                <!-- inline CSS -->
+
+                <ol>
+                  <li>Faster color print</li>
+                  <li>Pro quality color for presentations</li>
+                  <li>2-sided print/scan</li>
+                  <li>mobile/wireless</li>
+                  <li>Pages per min 19 ppm</li>
+                  <li>Brand Epson</li>
+                  <li>Wireless Yes</li>
+                  <li>Compatible OS PC, Mac</li>
+                </ol>
+              </div>
+              <!-- Learn More button to display Printer Highlights -->
+              <button class="learn-more">Learn more</button>
+            </div>
+          </div>
+          <div class="products-card">
+            <div class="image-wrapper">
+              <img src="pp2.png" width="100%" />
+              <!-- inline CSS -->
+            </div>
+            <div class="content-wrapper">
+              <h5 class="productName">HP OfficeJet Pro 8025e</h5>
+              <div class="review">
+                <p>
+                  Rating:
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                  2187 reviews
+                </p>
+              </div>
+              <h3>Save <span>$100</span></h3>
+              <br />
+              <h2 style="align-self: flex-start" class="price">Price : $399</h2>
+              <del class="DltPrice">
+                <h3>Price : $499</h3>
+              </del>
+
+              <p class="warranty">1-year warranty included</p>
+
+              <div class="show-more">
+                <h1 style="text-align: center">
+                  Printer <span>highlights</span>
+                </h1>
+                <!-- inline CSS -->
+
+                <ol>
+                  <li>Faster color print</li>
+                  <li>Pro quality color for presentations</li>
+                  <li>2-sided print/scan</li>
+                  <li>mobile/wireless</li>
+                  <li>Pages per min 19 ppm</li>
+                  <li>Brand Epson</li>
+                  <li>Wireless Yes</li>
+                  <li>Compatible OS PC, Mac</li>
+                </ol>
+              </div>
+              <button class="learn-more">Learn more</button>
+            </div>
+          </div>
+
+          <div class="products-card">
+            <div class="image-wrapper">
+              <img src="pp3.png" width="100%" />
+              <!-- inline CSS -->
+            </div>
+            <div class="content-wrapper">
+              <h5 class="productName">Epson WorkForce WF-2930</h5>
+              <div class="review">
+                <p>
+                  Rating:
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                  2087 reviews
+                </p>
+              </div>
+              <h3>Save <span>$100</span></h3>
+              <br />
+              <h2 style="align-self: flex-start" class="price">Price : $399</h2>
+              <del class="DltPrice">
+                <h3>Price : $499</h3>
+              </del>
+              <p class="warranty">1-year warranty included</p>
+              <div class="show-more">
+                <h1 style="text-align: center">
+                  Printer <span>highlights</span>
+                </h1>
+                <!-- inline CSS -->
+
+                <ul>
+                  <li>Faster color print</li>
+                  <li>Pro quality color for presentations</li>
+                  <li>2-sided print/scan</li>
+                  <li>mobile/wireless</li>
+                  <li>Pages per min 19 ppm</li>
+                  <li>Brand Epson</li>
+                  <li>Wireless Yes</li>
+                  <li>Compatible OS PC, Mac</li>
+                </ul>
+              </div>
+              <button class="learn-more">Learn more</button>
+            </div>
+          </div>
+          <div class="products-card">
+            <div class="image-wrapper">
+              <img src="pp4.png" width="100%" />
+              <!-- inline CSS -->
+            </div>
+            <div class="content-wrapper">
+              <h5 class="productName">Canon PIXMA TR8622a</h5>
+              <div class="review">
+                <p>
+                  Rating:
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                  2987 reviews
+                </p>
+              </div>
+              <h3>Save <span>$100</span></h3>
+              <br />
+              <h2 style="align-self: flex-start" class="price">Price : $399</h2>
+              <del class="DltPrice">
+                <h3>Price : $499</h3>
+              </del>
+              <p class="warranty">1-year warranty included</p>
+
+              <div class="show-more">
+                <h1 style="text-align: center">
+                  Printer <span>highlights</span>
+                </h1>
+                <!-- inline CSS -->
+
+                <ul>
+                  <li>Faster color print</li>
+                  <li>Pro quality color for presentations</li>
+                  <li>2-sided print/scan</li>
+                  <li>mobile/wireless</li>
+                  <li>Pages per min 19 ppm</li>
+                  <li>Brand Epson</li>
+                  <li>Wireless Yes</li>
+                  <li>Compatible OS PC, Mac</li>
+                </ul>
+              </div>
+              <button class="learn-more">Learn more</button>
+            </div>
+          </div>
+
+          <div class="products-card">
+            <div class="image-wrapper">
+              <img src="pp5.png" width="100%" />
+              <!-- inline CSS -->
+            </div>
+            <div class="content-wrapper">
+              <h5 class="productName">Canon PIXMA TR4722</h5>
+              <div class="review">
+                <p>
+                  Rating:
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                  1889 reviews
+                </p>
+              </div>
+              <h3>Save <span>$100</span></h3>
+              <br />
+              <h2 style="align-self: flex-start" class="price">Price : $399</h2>
+              <del class="DltPrice">
+                <h3>Price : $499</h3>
+              </del>
+              <p class="warranty">1-year warranty included</p>
+
+              <div class="show-more">
+                <h1 style="text-align: center">
+                  Printer <span>highlights</span>
+                </h1>
+                <!-- inline CSS -->
+                <ul>
+                  <li>Faster color print</li>
+                  <li>Pro quality color for presentations</li>
+                  <li>2-sided print/scan</li>
+                  <li>mobile/wireless</li>
+                  <li>Pages per min 19 ppm</li>
+                  <li>Brand Epson</li>
+                  <li>Wireless Yes</li>
+                  <li>Compatible OS PC, Mac</li>
+                </ul>
+              </div>
+              <button class="learn-more">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div id="view-more" class="btn">
+          <a href="products.html"> View more products </a>
+        </div>
+      </section>
+    </main>
+    <!-- footer section -->
+    <footer>
+    
+      <div class="footer-container">
+      <!-- For image slider -->
+      <div class="footer-slide-container">
+        <div class="brands">
+            <div class="logos">
+                <img src="epson.png" alt="">
+                <img src="canon.png" alt="">
+                <img src="hp.png" alt="">
+                <img src="xerox.png" alt="">
+                <img src="lenovo.png" alt="">
+                <img src="samsung.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="epson.png" alt="">
+                <img src="canon.png" alt="">
+                <img src="hp.png" alt="">
+                <img src="xerox.png" alt="">
+                <img src="lenovo.png" alt="">
+                <img src="samsung.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End of Image slider -->
+        <div class="footer-content">
+          <!-- left-section contains Our logo and social media icons -->
+          <div class="left-section">
+            <div class="logo-container">
+              <img src="dark-logo.png" alt="Logo" class="logo" />
+            </div>
+            <!-- social media icons -->
+            <div class="footer-social-media">
+              <a href="" target="_blank">
+                <i class="bx bxl-facebook-circle"></i>
+              </a>
+
+              <a href="" target="_blank">
+                <i class="bx bxl-instagram"></i>
+              </a>
+
+              <a href="" target="_blank">
+                <i class="bx bxl-youtube"></i>
+              </a>
+
+              <a href="" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <!-- Using icons from Box icon website -->
+            </div>
+          </div>
+          <!-- div text contains Our Team and Explore sections -->
+          <div class="text">
+            <div class="team">
+              <h2 class="footer-heading">Our Team</h2>
+              <ul>
+                <li>
+                  <a class="teamName" href="aboutus.html#robert-page">
+                    Safal Bhattarai</a>
+                </li>
+                <li>
+                  <a class="teamName" href="aboutus.html#rupen-page">
+                    Rupen Rana Magar</a>
+                </li>
+                <li>
+                  <a class="teamName" href="aboutus.html#rabindra-page">
+                    Rabindra Aryal</a>
+                </li>
+                <li>
+                  <a class="teamName" href="aboutus.html#karan-page">
+                    Karan Bastola</a>
+                </li>
+                <li>
+                  <a class="teamName" href="aboutus.html#sanjita-page">
+                    Sanjita Chaudhari</a>
+                </li>
+              </ul>
+              <!-- Creating a Contact Us button -->
+              <a href="aboutus.html#contact" class="footer-btn">Contact Us</a>
+            </div>
+            <div class="navigation">
+              <h2 class="footer-heading">Explore</h2>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Another div insider footer section-->
+      <div class="copyright" style="text-align: center">
+        Nepali Chitra Copyright © 2024 Nepali Chitra - All rights reserved
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- using icon from box icon website -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <style>
+    :root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+    .portfolio-img img {
+      width: 35vw;
+      padding: 0%;
+      background: linear-gradient(#2193b0, #6dd5ed);
+      border-radius: 100% 73% 63% 100% / 100% 73% 99% 69%;
+      transition: 2s ease;
+      animation: floatImage 4s ease-in-out infinite;
+    }
+
+    @keyframes floatImage {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-0.5rem);
+      }
+    }
+
+    .portfolio-img img:hover {
+      background: linear-gradient(#27abcc, #82e8ff);
+      border-radius: 42% 59% 44% 56% / 39% 39% 63% 54%;
+      filter: drop-shadow(5px 5px 10px #105cdf);
+      padding: 3%;
+    }
+
+    .portfolio-content p {
+      font-size: 1.7rem;
+      font-family: cursive;
+      text-align: justify;
+      margin-right: 10rem;
+    }
+
+    .social-media a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 4rem;
+      width: 4rem;
+      background: transparent;
+      border: 0.2rem solid var(--main-color);
+      border-radius: 50%;
+      font-size: 2rem;
+      color: var(--main-color);
+      margin: 3rem 1.5rem 3rem 0;
+      transition: transform, background 0.3s, color 0.3s, box-shadow 5s;
+    }
+
+    .social-media a:hover {
+      transform: none;
+      background: var(--main-color);
+      color: var(--second-bg-color);
+      box-shadow: 0 0 10rem var(--main-color);
+    }
+
+    .button {
+      max-width: fit-content;
+      display: inline;
+      padding: 1rem 2.8rem;
+      background: var(--main-color);
+      border-radius: 4rem;
+      box-shadow: 0 0 1rem var(--main-color);
+      font-size: 1.6rem;
+      color: var(--second-bg-color);
+      letter-spacing: 0.1rem;
+      font-weight: 600;
+      transition: 0.1s ease;
+    }
+    .button:hover{
+      box-shadow: 0 0 0.4rem var(--main-color);
+    }
+
+    
+
+    .heading {
+      text-align: center;
+      font-size: 4.5rem;
+    }
+    
+    .portfolio-content .text-animation {
+      position: relative;
+    }
+
+    .portfolio-content .text-animation h1 {
+      position: absolute;
+      font-size: 5.6rem;
+      font-weight: 700;
+    }
+
+    .portfolio-content .text-animation h1:nth-child(1) {
+      color: transparent;
+      -webkit-text-stroke: 0.4px var(--main-color);
+    }
+
+    .portfolio-content .text-animation h1:nth-child(2) {
+      color: var(--main-color);
+      animation: animate 4s ease-in-out infinite;
+    }
+
+    @keyframes animate {
+      0%,
+      100% {
+        /* clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%); */
+        clip-path: polygon(
+          0% 56%,
+          6% 61%,
+          12% 64%,
+          20% 66%,
+          26% 66%,
+          33% 65%,
+          40% 61%,
+          46% 56%,
+          51% 51%,
+          57% 46%,
+          67% 44%,
+          76% 43%,
+          83% 43%,
+          89% 46%,
+          96% 50%,
+          100% 56%,
+          99% 100%,
+          0% 100%
+        );
+      }
+      50% {
+        /* clip-path: polygon(0% 60%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 84% 45%, 100% 52%, 100% 100%, 0% 100%);
+  } */
+        clip-path: polygon(
+          0% 56%,
+          4% 51%,
+          10% 47%,
+          17% 44%,
+          25% 44%,
+          32% 48%,
+          39% 53%,
+          44% 57%,
+          49% 60%,
+          57% 64%,
+          65% 66%,
+          73% 69%,
+          81% 70%,
+          88% 68%,
+          95% 64%,
+          100% 56%,
+          99% 100%,
+          0% 100%
+        );
+      }
+    }
+    .home {
+      /* By usig display: flex, the element are automatically align like colomun or row with auto width and auto height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 3.2rem;
+    }
+    .portfolio-content h3:nth-of-type(2) {
+      margin-bottom: 2rem;
+    }
+    #robert-content{
+      display: flex;
+    }
+    #robert-content .portfolio-content{
+      align-self: center;
+    }
+    #robert-content .portfolio-img img{
+      width: 30vw;
+    }
+    #rupen-page, #sanjita-page{
+      background:var(--second-bg-color);
+    }
+    #rupen-content, #sanjita-content{
+      display: flex;
+      gap: 10rem;
+      flex-direction: row-reverse;
+    }
+    #rupen-content .portfolio-content, #sanjita-content .portfolio-content{
+      align-self: center;
+    }
+    #rupen-content .portfolio-img img{
+      rotate: 10deg;
+    }
+    #sanjita-content .portfolio-img img{
+      rotate: -5deg;
+      width: 25vw;
+    }
+  </style>
+
+  <body>
+    <!-- scroll-watcher div above the navigation bar -->
+    <div class="scroll-watcher"></div>
+    <!-- Header of the webpage -->
+    <header class="header">
+      <!-- logo -->
+      <div class="logo-content">
+        <a href="#" class="logo">
+          <img id="logo" src="dark-logo.png" alt="" />
+        </a>
+        <img id="icon" src="moon.png" alt="" />
+      </div>
+      <!-- Navigation menu -->
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="products.html">Services</a>
+        <a href="research.html">Research</a>
+        <a class="active"  href="#">About</a>
+      </nav>
+    </header>
+    <section class="portfolio" id="robert-page">
+      <div id="robert-content">
+    <!-- Yo Section ma 4ota div use garim -->
+      <!-- 1st div for Evrytext in Context 2nd for Linking to your social media
+    3rd for Download Cv button 4th contains image-->
+    <!-- We declear div for all seperate things so we can design them individually -->
+    <div class="portfolio-content">
+        <h3>Hello, It's Me</h3>
+        <div class="text-animation">
+          <h1>Safal Bhattarai</h1>
+          <h1>Safal Bhattarai</h1>
+        </div>
+
+        <h3 style="margin-top: 7rem">And I'm a <span>Student</span></h3>
+        <p>
+          I'm the leader of the Nepali Chitra Printing website's development team. You can
+          refer me as Robert Bhattarai. I live with a passion for technology, particularly
+          in the realm of frontend development.
+        </p>
+
+        <!-- social media ko sabei icon lai same desgin garnu hamile euta div ko vitra lekhim -->
+
+        <div class="social-media">
+          <a href="">
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+
+          <a href="" >
+            <i class="bx bxl-instagram"></i>
+          </a>
+
+          <a href="" >
+            <i class="bx bxl-youtube"></i>
+          </a>
+
+          <a href="" >
+            <i class="bx bxl-linkedin"></i>
+          </a>
+        </div>
+  
+      </div>
+
+      <!-- similarly img lai ni arko div ma lekheko -->
+      <div class="portfolio-img">
+        <img src="robertimg.png" class="merophoto" />
+      </div>
+    </div>
+    </section>
+    <!-- first section completed -->
+
+    <section class="portfolio" id="rupen-page">
+      <div id="rupen-content">
+      <!-- Yo Section ma 4ota div use garim -->
+        <!-- 1st div for Evrytext in Context 2nd for Linking to your social media
+      3rd for Download Cv button 4th contains image-->
+      <!-- We declear div for all seperate things so we can design them individually -->
+      <div class="portfolio-content">
+          <h3>Hello, It's Me</h3>
+          <div class="text-animation">
+            <h1>Rupen Rana Magar</h1>
+            <h1>Rupen Rana Magar</h1>
+          </div>
+  
+          <h3 style="margin-top: 7rem">And I'm a <span>Student</span></h3>
+          <p>
+            I'm also a member of the Nepali Chitra Printing website's development team. As an enthusiastic
+            and eager learner, this project has really aided my coding skills and allowed me to dig deeper
+            into website building. I look forward to working on similar projects in the future.
+          </p>
+  
+          <!-- social media ko sabei icon lai same desgin garnu hamile euta div ko vitra lekhim -->
+  
+          <div class="social-media">
+            <a href="">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+  
+            <a href="" >
+              <i class="bx bxl-instagram"></i>
+            </a>
+  
+            <a href="" >
+              <i class="bx bxl-youtube"></i>
+            </a>
+  
+            <a href="" >
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+        </div>
+  
+        <!-- similarly img lai ni arko div ma lekheko -->
+        <div class="portfolio-img">
+          <img src="rupenimg.png" class="merophoto" />
+        </div>
+      </div>
+      </section>
+      <!-- first section completed -->
+
+      <section class="portfolio" id="karan-page">
+      <div id="robert-content">
+    <!-- Yo Section ma 4ota div use garim -->
+      <!-- 1st div for Evrytext in Context 2nd for Linking to your social media
+    3rd for Download Cv button 4th contains image-->
+    <!-- We declear div for all seperate things so we can design them individually -->
+    <div class="portfolio-content">
+        <h3>Hello, It's Me</h3>
+        <div class="text-animation">
+          <h1>Karan Bastola</h1>
+          <h1>Karan Bastola</h1>
+        </div>
+
+        <h3 style="margin-top: 7rem">And I'm a <span>Student</span></h3>
+        <p>
+          I'm also a member of the Nepali Chitra Printing website's development team.
+          This practical approach not only sharpens my skills but also provides valuable
+           insights into the dynamic field of IT.
+        </p>
+
+        <!-- social media ko sabei icon lai same desgin garnu hamile euta div ko vitra lekhim -->
+
+        <div class="social-media">
+          <a href="">
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+
+          <a href="" >
+            <i class="bx bxl-instagram"></i>
+          </a>
+
+          <a href="" >
+            <i class="bx bxl-youtube"></i>
+          </a>
+
+          <a href="" >
+            <i class="bx bxl-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- similarly img lai ni arko div ma lekheko -->
+      <div class="portfolio-img">
+        <img src="karanimg.png" class="merophoto" />
+      </div>
+    </div>
+    </section>
+    <!-- first section completed -->
+
+    <section class="portfolio" id="sanjita-page">
+      <div id="sanjita-content">
+      <!-- Yo Section ma 4ota div use garim -->
+        <!-- 1st div for Evrytext in Context 2nd for Linking to your social media
+      3rd for Download Cv button 4th contains image-->
+      <!-- We declear div for all seperate things so we can design them individually -->
+      <div class="portfolio-content">
+          <h3>Hello, It's Me</h3>
+          <div class="text-animation">
+            <h1>Sanjita Chaudhary</h1>
+            <h1>Sanjita Chaudhary</h1>
+          </div>
+  
+          <h3 style="margin-top: 7rem">And I'm a <span>Student</span></h3>
+          <p>
+            I'm Sanjita Chaudhary. I'm also a member of the Nepali Chitra Printing website's 
+            development team. Currently, i'm student of Itahari International 
+            College studying Bsc(hons computing) and also a front developer.
+          </p>
+  
+          <!-- social media ko sabei icon lai same desgin garnu hamile euta div ko vitra lekhim -->
+  
+          <div class="social-media">
+            <a href="">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+  
+            <a href="" >
+              <i class="bx bxl-instagram"></i>
+            </a>
+  
+            <a href="" >
+              <i class="bx bxl-youtube"></i>
+            </a>
+  
+            <a href="" >
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+        </div>
+  
+        <!-- similarly img lai ni arko div ma lekheko -->
+        <div class="portfolio-img">
+          <img src="sanjitaimg.png" class="merophoto" />
+        </div>
+      </div>
+      </section>
+      <!-- first section completed -->
+
+      <section class="portfolio" id="rabindra-page">
+      <div id="robert-content">
+    <!-- Yo Section ma 4ota div use garim -->
+      <!-- 1st div for Evrytext in Context 2nd for Linking to your social media
+    3rd for Download Cv button 4th contains image-->
+    <!-- We declear div for all seperate things so we can design them individually -->
+    <div class="portfolio-content">
+        <h3>Hello, It's Me</h3>
+        <div class="text-animation">
+          <h1>Rabindra Aryal</h1>
+          <h1>Rabindra Aryal</h1>
+        </div>
+
+        <h3 style="margin-top: 7rem">And I'm a <span>Student</span></h3>
+        <p>
+          I'm also a member of the Nepali Chitra Printing website's development team. 
+          I am passionate about projects, blending theory with hands-on experience. 
+          Thriving in real-world scenarios, I'm committed to continuous learning and eager 
+          for opportunities to refine my skills in the dynamic field of information technology.
+        </p>
+
+        <!-- social media ko sabei icon lai same desgin garnu hamile euta div ko vitra lekhim -->
+
+        <div class="social-media">
+          <a href="">
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+
+          <a href="" >
+            <i class="bx bxl-instagram"></i>
+          </a>
+
+          <a href="" >
+            <i class="bx bxl-youtube"></i>
+          </a>
+
+          <a href="" >
+            <i class="bx bxl-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- similarly img lai ni arko div ma lekheko -->
+      <div class="portfolio-img">
+        <img src="ravindraimg.png" class="merophoto" />
+      </div>
+    </div>
+    </section>
+    <!-- first section completed -->    
+
+    <!-- contact form -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Us</span></h2>
+      <!-- form tag for submiting the form-->
+      <form action="#">
+        <div class="input-box">
+          <input id="Name" type="text" placeholder="Full name" />
+          <input id="Email" type="text" placeholder="Email Address" />
+        </div>
+        <div class="input-box">
+          <input id="number" type="number" placeholder="Mobile Number" />
+          <select name="Gender" id="Gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="other">Other</option>
+            <option value="preferNotToSay">Prefer not to say</option>
+          </select>
+        </div>
+
+        <textarea name="Box" id="Message" cols="30" rows="10" placeholder="Your Feedback are valuable"></textarea>
+        <input
+          type="submit"
+          value="Send Message"
+          class="btn"
+          id="submitForm"
+          onclick="popup()"
+        />
+      </form>
+    </section>
+  <!-- footer section -->
+<footer>
+  <div class="footer-container">
+    <!-- For image slider -->
+    <div class="footer-slide-container">
+      <div class="brands">
+          <div class="logos">
+              <img src="epson.png" alt="">
+              <img src="canon.png" alt="">
+              <img src="hp.png" alt="">
+              <img src="xerox.png" alt="">
+              <img src="lenovo.png" alt="">
+              <img src="samsung.png" alt="">
+          </div>
+          <div class="logos">
+              <img src="epson.png" alt="">
+              <img src="canon.png" alt="">
+              <img src="hp.png" alt="">
+              <img src="xerox.png" alt="">
+              <img src="lenovo.png" alt="">
+              <img src="samsung.png" alt="">
+          </div>
+      </div>
+  </div>
+  <!-- End of Image slider -->
+    <div class="footer-content">
+      <div class="left-section">
+        <div class="logo-container">
+          <img src="dark-logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="footer-social-media">
+          <a
+            href="#"
+            target="_blank"
+          >
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+
+          <a href="#" target="_blank">
+            <i class="bx bxl-instagram"></i>
+          </a>
+
+          <a href="#" target="_blank">
+            <i class="bx bxl-youtube"></i>
+          </a>
+
+          <a href="#" target="_blank">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <div class="text">
+          <div class="team">
+              <h2 class="footer-heading">Our Team</h2>
+              <ul>
+                <li><a class="teamName" href="aboutus.html#robert-page">Safal Bhattarai</a></li>
+                <li><a class="teamName" href="aboutus.html#rupen-page">Rupen Rana Magar</a></li>
+                <li><a class="teamName" href="aboutus.html#rabindra-page">Rabindra Aryal</a></li>
+                <li><a class="teamName" href="aboutus.html#karan-page">Karan Bastola</a></li>
+                <li><a class="teamName" href="aboutus.html#sanjita-page">Sanjita Chaudhari</a></li>
+                </ul>
+                <a href="aboutus.html#contact" class="footer-btn">Contact Us</a>
+            </div>
+            <div class="navigation">
+              <h2 class="footer-heading">Explore</h2>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="#">About Us</a></li>
+              </ul>
+            </div>
+      </div>          
+      
+  </div>
+  </div>
+  <div class="copyright" style="text-align: center;">
+      Nepali Chitra Copyright © 2024 Nepali Chitra - All rights reserved
+    </div>
+</footer>
+    </body>
+  <script src="script.js"></script>
+</html>

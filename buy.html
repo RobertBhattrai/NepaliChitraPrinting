@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepali Chitra Printing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  /* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* Form Container */
+form {
+  border:double var(--main-color);
+  background: var(--bg-color);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgb(43, 38, 38);
+  max-width: 600px;
+  margin: 50px auto;
+  transition: box-shadow 0.3s;
+  animation: form-animation 2s infinite ease-in-out;
+}
+@keyframes form-animation{
+  0% {
+                box-shadow: 0 0 10px #00eaffc1; /* Initial color and size of the glow */
+            }
+            50% {
+                box-shadow: 0 0 20px #00eaff; /* Intermediate color and size of the glow */
+            }
+            100% {
+                box-shadow: 0 0 10px #00eaffc1; /* Return to the initial color and size */
+            }
+}
+
+/* Headers */
+h2 {
+  color: var(--text-color);
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+/* sub header */
+h3{
+  font-size: 18px;
+}
+/* Line on Headers */
+h2:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 60px;
+  background: var(--text-color);
+  margin-top: 8px;
+}
+
+/* Input Fields */
+input,
+select,
+textarea {
+  width: calc(100% - 24px);
+  padding: 12px;
+  border: 1px solid var(--second-bg-color);
+  border-radius: 5px;
+  font-size: 16px;
+  color:black;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+select{
+  color: var(--text-color);
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color:var(--main-color);
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--second-bg-color);
+  border-radius: 50%;
+  outline: none;
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--main-color);
+}
+input[type="checkbox"] {
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; */
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--bg-color);
+  border-radius: 3px; /* Adjust as needed */
+  outline: none;
+  margin-right: 5px;
+  margin-bottom: 0%;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--main-color);
+}
+
+/* Label Styling */
+label {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+/* Buttons */
+button {
+  padding: 14px 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 16px;
+  text-transform: uppercase;
+  background: var(--second-bg-color);
+}
+
+button:hover {
+  background: var(--main-color);
+}
+
+/* Step Panels */
+div[id^="step"] {
+  margin: 20px 0;
+}
+
+div[id^="step"]:not(:last-child) {
+  border-bottom: 2px solid --second-bg-color;
+  padding-bottom: 20px;
+}
+
+/* Table */
+table {
+  margin-bottom: 15px;
+  width: 10cm;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  color: var(--text-color);
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 16px;
+}
+
+th {
+  background: var(--second-bg-color);
+}
+
+/* Submit Button */
+form button[type="submit"] {
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin-top: 20px;
+}
+
+form button[type="submit"]:hover {
+  background: var(--second-bg-color);
+}
+
+/* Additional Styles for Review Purchase and Purchase Printer buttons */
+#review-purchase,
+#purchase-button {
+  background: #00c50d;
+  color: var(--text-color);
+}
+
+#review-purchase:hover,
+#purchase-button:hover {
+  background: #2be538;
+}
+span{
+  color: var(--main-color);
+}
+
+</style>
+
+<body>
+  <!-- scroll-watcher div above the navigation bar -->
+  <div class="scroll-watcher"></div>
+  <!-- Header of the webpage -->
+  <header class="header">
+    <!-- logo -->
+    <div class="logo-content">
+      <a href="#" class="logo">
+        <img id="logo" src="dark-logo.png" alt="" />
+      </a>
+      <img id="icon" src="moon.png" alt="" />
+    </div>
+    <!-- Navigation menu -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a class="active" href="products.html">Services</a>
+      <a href="research.html">Research</a>
+      <a href="aboutus.html">About</a>
+    </nav>
+  </header>
+    
+  <section class="purchaseForm" id="purchaseForm">
+    <h1 class="heading"><span>Nepali Chitra</span> Printing : Print Perfection</h1>
+    <form id="printer-form" onsubmit="return validateStep(currentStep)">
+        <!-- Step 1 - User Details -->
+        <div id="step-1">
+            <h2><span>Step 1</span> : Your Details</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" />
+
+            <label for="address">Address:</label>
+            <textarea id="address" placeholder="Your Address"></textarea>
+
+            <button type="button" onclick="nextStep()">Next</button>
+        </div>
+        <!-- Step 3 - Select Printer Model -->
+        <div id="step-2" style="display: none">
+            <h2><span>Step 2</span> : Select Printer Model</h2>
+
+            <select id="printer-model">
+                <option value="">Select model...</option>
+
+                <!-- Inkjet Models -->
+                <optgroup label="New Arrivals">
+                    <option>HP OfficeJet Pro 9015e</option>
+                    <option>HP OfficeJet Pro 8025e</option>
+                    <option>WorkForce WF-2930</option>
+                    <option>Canon PIXMA TR8622a</option>
+                    <option>Canon PIXMA TR4722</option>
+                </optgroup>
+
+                <!-- Laser Models -->
+                <optgroup label="Top Selling">
+                    <option>WorkForce WF-3640</option>
+                    <option>WorkForce WF-3620</option>
+                    <option>HP ENVY 6455e</option>
+                    <option>HP ENVY Inspire 7955e</option>
+                    <option>HP DeskJet 3755</option>
+                </optgroup>
+
+                <!-- All-in-One Models -->
+                <optgroup label="Winter Offers">
+                    <option>WorkForce budget WF-2950</option>
+                    <option>WorkForce Pro WF-3823 limited</option>
+                    <option>Epson WorkForce WF-3640</option>
+                    <option>WorkForce Pro WF-3823 limited</option>
+                    <option>Epson WorkForce WF-3640</option>
+                </optgroup>
+
+                <!-- 3D Printers -->
+                <optgroup label="Budget Printers">
+                    <option>EcoTank ET-2800</option>
+                    <option>EcoTank ET-2803</option>
+                    <option>EcoTank ET-4800</option>
+                    <option>EcoTank ET-M1170</option>
+                    <option>EcoTank ET-2850</option>
+                </optgroup>
+            </select>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" />
+
+            <button type="button" onclick="previousStep()">Previous</button>
+            <button type="button" onclick="nextStep()">Next</button>
+        </div>
+
+        <!-- Step 4 - Delivery and Payment -->
+        <div id="step-3" style="display:none;">
+
+            <h2><span>Step 3</span> : Delivery & Payment</h2>
+
+            <h3>Delivery</h3>
+
+            <label>
+                <input type="radio" name="delivery" value="standard">
+                Standard Delivery (5-7 days) - Free
+            </label>
+
+            <label>
+                <input type="radio" name="delivery" value="express">
+                Express Delivery (2-3 days) - $9.99
+            </label>
+
+            <h3>Payment</h3>
+            <div class="paymentOptions">
+            <label>
+                <input type="radio" name="payment" value="credit">
+                Credit Card
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="paypal">
+                Cash on delivery
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="apple">
+                E-wallet
+            </label>
+            </div>
+            <button type="button" onclick="previousStep()">Previous</button>
+            <button type="button" onclick="nextStep()">Next</button>
+
+        </div>
+
+
+        <!-- Step 5 - Additional Details -->
+        <div id="step-4" style="display: none">
+
+            <h2><span>Step 4 </span>: Additional Details</h2>
+
+            <label>
+                <input type="checkbox" id="installation">
+                Include professional installation ($49.99)
+            </label>
+
+            <label>
+                <input type="checkbox" id="warranty">
+                Add 2 year extended warranty ($29.99)
+            </label>
+            <button type="button" onclick="previousStep()">Previous</button>
+            <button type="button" onclick="nextStep()">Next</button>
+        </div>
+
+        <!-- Step 6 - Order Summary -->
+        <div id="step-5" style="display: none">
+
+            <h2><span>Step 5 </span>: Order Summary</h2>
+
+            <table id="summary-table" style="display: none;">
+                <tr>
+                    <td>Name:</td>
+                    <td id="summary-name"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td id="summary-address"></td>
+                </tr>
+                <tr>
+                    <td>Printer Model:</td>
+                    <td id="summary-printer-model"></td>
+                </tr>
+                <tr>
+                    <td>Quantity:</td>
+                    <td id="summary-quantity"></td>
+                </tr>
+            </table>
+            <div id="checkboxes" style="display:none;">
+            <label>
+                <input type="checkbox" id="terms">
+                I agree to the terms and conditions
+            </label>
+
+            <label>
+                <input type="checkbox" id="privacy">
+                I agree to the privacy policy
+            </label>
+
+            <label>
+                <input type="checkbox" id="discount">
+                I would like a discount
+            </label>
+            </div>
+            <button type="button" onclick="previousStep()">Previous</button>
+            <button type="button" id="review-purchase" onclick="showDetails()">Review Purchase</button>
+            <button type="submit" id="purchase-button" style="display:none">Purchase Printer</button>
+        </div>
+    </form>
+  </section>  
+  <script src="script.js"></script>
+    <script>
+      let currentStep = 1;
+const totalSteps = 5;
+
+function nextStep() {
+  event.preventDefault();
+  if (validateStep(currentStep)) {
+    document.getElementById("step-" + currentStep).style.display = "none";
+
+    if (currentStep < totalSteps) {
+      currentStep++;
+      document.getElementById("step-" + currentStep).style.display = "block";
+    }
+  }
+}
+
+function previousStep() {
+  event.preventDefault();
+  if (currentStep > 1) {
+    document.getElementById("step-" + currentStep).style.display = "none";
+    currentStep--;
+    document.getElementById("step-" + currentStep).style.display = "block";
+  }
+}
+
+function validateStep(step) {
+  const currentStepElement = document.getElementById("step-" + step);
+  var name = document.getElementById("name").value;
+  var address = document.getElementById("address").value;
+  var printerModel = document.getElementById("printer-model").value;
+  var quantity = document.getElementById("quantity").value;
+  var delivery = document.getElementsByName("delivery");
+  var payment = document.getElementsByName("payment");
+  var installation = document.getElementById("installation");
+  var warranty = document.getElementById("warranty");
+  var terms = document.getElementById("terms");
+  var privacy = document.getElementById("privacy");
+  if (step === 1) {
+    if (name == "") {
+      alert("Please enter your name");
+      return false;
+    }
+    if (address == "") {
+      alert("Please enter your address");
+      return false;
+    }
+  } 
+   else if (step === 2) {
+    if (printerModel == "") {
+      alert("Please select your printer model");
+      return false;
+    }
+    if (quantity == "") {
+      alert("Please enter quantity");
+      return false;
+    }
+  } else if (step === 3) {
+    if (delivery[0].checked == false && delivery[1].checked == false) {
+      alert("Please select your delivery option");
+      return false;
+    }
+    if (payment[0].checked == false && payment[1].checked == false &&payment[2].checked == false) {
+      alert("Please select your payment option");
+      return false;
+    }
+  } else if (step === 4) {
+    if (installation.checked == false && warranty.checked == false) {
+      alert("Please select installation or warranty");
+      return false;
+    }
+  } else if (step === 5) {
+    if (terms.checked == false || privacy.checked == false) {
+      alert("Please accept our terms and conditions");
+      return false;
+    }
+    alert("Thank you for your order!\nYou can now return to the home page");
+  }
+  return true;
+}
+
+function showDetails() {
+  document.getElementById("summary-name").innerHTML =
+    document.getElementById("name").value;
+  document.getElementById("summary-address").innerHTML =
+    document.getElementById("address").value;
+  document.getElementById("summary-printer-model").innerHTML =
+    document.getElementById("printer-model").value;
+  document.getElementById("summary-quantity").innerHTML =
+    document.getElementById("quantity").value;
+  document.getElementById("summary-table").style.display = "block";
+  document.getElementById("purchase-button").style.display = "block";
+  document.getElementById("checkboxes").style.display = "block";
+  document.getElementById("review-purchase").style.display = "none";
+}
+    </script>
+</body>
+
+</html>

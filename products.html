@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Printers</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="description" content="">
+
+    <!-- Internal CSS  -->
+    <style>
+
+        .pd-cards-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .price {
+            color: brown;
+        }
+
+        .pd-card {
+            max-width: 18em;
+            background-color: rgba (0, 0, 0, 0.4);
+            padding: 2em;
+            box-shadow: 0 5px 5px whitesmoke;
+            transition: 0.3s;
+            text-align: center;
+            margin: 1em;
+            flex-basis: calc(33.33% - 2rem);
+            box-sizing: border-box;
+            margin: 1%;
+        }
+
+        .pd-card img {
+            max-width: 100%;
+            border-radius: 20px;
+        }
+
+        .pd-card h5 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .pd-card button {
+            background-color: var(--main-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.1s;
+        }
+
+        .pd-card:hover {
+            background-color: lightslategray;
+            border-radius: 1rem;
+            color: #fff;
+        }
+        .pdname{
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body> 
+    <!-- scroll-watcher div above the navigation bar -->
+    <div class="scroll-watcher"></div>
+    <!-- Header of the webpage -->
+    <header class="header">
+      <!-- logo -->
+      <div class="logo-content">
+        <a href="#" class="logo">
+          <img id="logo" src="dark-logo.png" alt="" />
+        </a>
+        <img id="icon" src="moon.png" alt="" />
+      </div>
+      <!-- Navigation menu -->
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a class="active" href="#">Services</a>
+        <a href="research.html">Research</a>
+        <a href="aboutus.html">About</a>
+      </nav>
+    </header>
+    <section class="product-page">
+        
+        <!-- product-cards-container is used arrange products side wise -->
+
+            <h1 class="heading" style="text-align: left; margin-bottom: 2rem;"><span>1. </span>New Arrivals</h1>
+       
+            <div class="pd-cards-container">
+            <!-- first row of product card -->
+
+            <div class="products-card">
+                <img src="pp.png">
+                <h5 class="pdName">HP OfficeJet Pro 9015e </h5>
+                <h2 class="price"> Price : $399</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        2287 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"> <button> BUY NOW</button> </a>
+            </div>
+            
+            <!-- A product with tags each containing class for CSS -->
+            
+            <div class="products-card">
+                <img src="pp2.png">
+                <h5 class="pdName">HP OfficeJet Pro 8025e </h5>
+                <h2 class="price">Price : $399</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        2007 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"> <button> BUY NOW</button></a>
+            </div>
+            
+            <!-- A product with tags each containing class for CSS -->
+            
+            <div class="products-card">
+                <img src="pp3.png">
+                <h5 class="pdName">WorkForce WF-2930</h5>
+
+                <h2 class="price"> Price : $399</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        1993 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+            
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="pp4.png">
+                <h5 class="pdName">Canon PIXMA TR8622a </h5>
+
+                <h2 class="price"> Price : $399</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star"> &#9733; </span>
+                        <span class="star"> &#9733; </span>
+                        <span class="star"> &#9733; </span>
+                        <span class="star"> &#9733; </span>
+                        <span class="star"> &#9733; </span>
+                        1799 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW </button></a>
+            </div>
+
+             <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="pp5.png">
+                <h5 class="pdName"> Canon PIXMA TR4722 </h5>
+
+                <h2 class="price">Price : $399</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        1599 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button>BUY NOW </button></a>
+            </div>
+        </div>
+        <h1 class="heading" style="text-align: left; margin-top: 2rem;" ><span>2. </span>Top Selling</h1>
+        <!-- Second row of product card -->
+        <!-- product-cards-container is used arrange products side wise -->
+
+        <div class="products-cards-container">
+            <div class="products-card">
+                <img src="pp6.webp">
+                <h5 class="pdName">WorkForce WF-3640 </h5>
+                <h2 class="price"> Price : $299</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        1498 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="pp7.webp">
+                <h5 class="productName">WorkForce WF-3620 </h5>
+                <h2 class="price"> Price : $299</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        1387 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+            
+            <div class="products-card">
+                <img src="pp9.webp">
+                <h5 class="productName">HP ENVY 6455e </h5>
+                <h2 class="price"> Price : $299</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        1375 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="pp8.png">
+                <h5 class="productName">HP ENVY Inspire 7955e </h5>
+                <h2 class="price"> Price : $299</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        1287 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="pp10.webp">
+                <h5 class="pdName">HP DeskJet 3755 </h5>
+                <h2 class="price"> Price : $299</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        1205 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+        </div>
+        <h1 class="heading" style="text-align: left; margin-top: 2rem;" ><span>3. </span>Winter Offers</h1>
+
+        <!-- Third row of product card  -->
+        <!-- product-cards-container is used arrange products side wise -->
+
+        <div class="products-cards-container">
+            <div class="products-card">
+                <img src="pp11.webp">
+                <h5 class="productName">HP DeskJet 3755 All-in-One Printer </h5>
+                <h2 class="price"> Price : $199</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        1186 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+            
+            <div class="products-card">
+                <img src="pp12.png">
+                <h5 class="pdName">WorkForce budget WF-2950 </h5>
+                <h2 class="price"> Price : $199</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        1123 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+            <img src="pp13.webp">
+                <h5 class="pdName"> WorkForce Pro WF-3823 limited</h5>
+                <h2 class="price"> Price : $199</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        1087 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="pp14.webp">
+                <h5 class="pdName">Epson WorkForce WF-3640 </h5>
+                <h2 class="price"> Price : $199</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        1047 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="pp15.webp">
+                <h5 class="productName">Epson WorkForce WF-3640 </h5>
+                <h2 class="price"> Price : $199</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        1001 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+        </div>
+        <h1 class="heading" style="text-align: left; margin-top: 2rem;" ><span>4. </span>Budget Printers</h1>
+        <!-- Fourth row of product cards-->
+        <!-- product-cards-container is used arrange products side wise -->
+
+        <div class="products-cards-container">
+            <div class="products-card">
+                <img src="P1.jpeg">
+                <h5 class="productName"> EcoTank ET-2800 </h5>
+                <h2 class="price"> Price : $99</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        997 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="P2.jpg">
+                <h5 class="productName"> EcoTank ET-2803 </h5>
+                <h2 class="price"> Price : $99</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        953 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="P3.png">
+                <h5 class="productName"> EcoTank ET-4800 </h5>
+                <h2 class="price"> Price : $99</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        987 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="P4.jpg">
+                <h5 class="pdName"> EcoTank ET-M1170 </h5>
+                <h2 class="price"> Price : $99</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        849 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a><button> BUY NOW</button></a>
+            </div>
+
+            <!-- A product with tags each containing class for CSS -->
+
+            <div class="products-card">
+                <img src="P5.jpg">
+                <h5 class="productName"> EcoTank ET-2850 </h5>
+                <h2 class="price"> Price : $99</h2>
+                <p class="warranty">1-year warranty included</p>
+                <div class="review">
+                    <p>Rating:
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        827 reviews
+                        <!-- HTML Unicodes  ( #9733 for black star and #9744 for white star )  -->
+                    </p>
+                </div>
+                <a href="buy.html"><button> BUY NOW</button></a>
+            </div>
+        </div>
+        <!-- A product with tags each containing class for CSS -->
+        </div>
+    </section>
+    <!-- footer section -->
+<footer>
+    <div class="footer-container">
+        <!-- For image slider -->
+      <div class="footer-slide-container">
+        <div class="brands">
+            <div class="logos">
+                <img src="epson.png" alt="">
+                <img src="canon.png" alt="">
+                <img src="hp.png" alt="">
+                <img src="xerox.png" alt="">
+                <img src="lenovo.png" alt="">
+                <img src="samsung.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="epson.png" alt="">
+                <img src="canon.png" alt="">
+                <img src="hp.png" alt="">
+                <img src="xerox.png" alt="">
+                <img src="lenovo.png" alt="">
+                <img src="samsung.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End of Image slider -->
+      <div class="footer-content">
+        <div class="left-section">
+          <div class="logo-container">
+            <img src="dark-logo.png" alt="Logo" class="logo">
+          </div>
+          <div class="footer-social-media">
+            <a
+              href=""
+              target="_blank">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+  
+            <a href="" target="_blank">
+              <i class="bx bxl-instagram"></i>
+            </a>
+  
+            <a href="" target="_blank">
+              <i class="bx bxl-youtube"></i>
+            </a>
+  
+            <a href="" target="_blank">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="text">
+            <div class="team">
+                <h2 class="footer-heading">Our Team</h2>
+                <ul>
+                  <li><a class="teamName" href="aboutus.html#robert-page">Safal Bhattarai</a></li>
+                  <li><a class="teamName" href="aboutus.html#rupen-page">Rupen Rana Magar</a></li>
+                  <li><a class="teamName" href="aboutus.html#rabindra-page">Rabindra Aryal</a></li>
+                  <li><a class="teamName" href="aboutus.html#karan-page">Karan Bastola</a></li>
+                  <li><a class="teamName" href="aboutus.html#sanjita-page">Sanjita Chaudhari</a></li>
+                  </ul>
+                  <a href="aboutus.html#contact" class="footer-btn">Contact Us</a>
+              </div>
+              <div class="navigation">
+                <h2 class="footer-heading">Explore</h2>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="research.html">Research</a></li>
+                  <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+              </div>
+        </div>          
+        
+    </div>
+    </div>
+    <div class="copyright" style="text-align: center;">
+        Nepali Chitra Copyright © 2024 Nepali Chitra - All rights reserved
+      </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>
